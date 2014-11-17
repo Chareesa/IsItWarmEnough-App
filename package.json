@@ -21,7 +21,8 @@
   "dependencies": {
     "body-parser": "^1.9.2",
     "express": "^4.10.1",
-    "request": "^2.47.0"
+    "request": "^2.47.0",
+    "superagent": "^0.18.2"
   },
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt test",
