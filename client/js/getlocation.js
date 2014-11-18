@@ -13,7 +13,6 @@ $(function () {
         var newMessage = '<h1>' + data.msg + '</h1>';
         return newMessage;
       });
-      // alert(data.msg);
     });
   };
 
