@@ -3,14 +3,14 @@
 var chai = require('chai');
 var chaihttp = require('chai-http');
 var expect = chai.expect;
-require('../server');
+require('../server.js');
 chai.use(chaihttp);
 var port = process.env.PORT || 3000;
 
 var url = 'http://localhost:' + port;
 
-describe('Retrieve local tempurature from WUNDERAPI', function() {
-  it('should return the temperature', function(done) {
+describe('Call WUNDERAPI and retrieve key', function() {
+  it('should retrieve key temp_f', function(done) {
     chai.request(url)
       .get('/current/')
       .send({'lat': 75.42, 'longi': -32.18})
@@ -20,5 +20,3 @@ describe('Retrieve local tempurature from WUNDERAPI', function() {
       });
   });
 });
-
-//Key - 9bca7f728808855f
