@@ -12,13 +12,10 @@ var url = 'http://localhost:' + port;
 describe('Retrieve local tempurature from WUNDERAPI', function() {
   it('should return the temperature', function(done) {
     chai.request(url)
-      .get('/current/')
-      .send({'lat': 75.42, 'longi': -32.18})
+      .get('/current/47.6000/-122.1667')
       .end(function(err, res) {
-        expect(res.body).to.include.keys('temp_f');
+        expect(res.body).to.include.keys('msg');
         done();
       });
   });
 });
-
-//Key - 9bca7f728808855f

@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       options: {
         node: true
       },
-      src: ['client/*.js']
+      src: ['server.js']
     },
 
     simplemocha: {
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     },
 
     jscs: {
-      src: ['client/*.js'],
+      src: ['server.js'],
       options: {
         config: '.jscsrc'
       }
