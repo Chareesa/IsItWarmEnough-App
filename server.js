@@ -13,7 +13,7 @@ app.get('/current/:lat/:longi', function(req, res) {
   var lat = req.params.lat;
   var longi = req.params.longi;
 
-  var weatherUrl = 'http://api.wunderground.com/api/9bca7f728808855f/conditions/q/' + lat + ',' + longi + '.json';
+  var weatherUrl = 'http://api.wunderground.com/api/'+ process.env.WUNDER_API + '/conditions/q/' + lat + ',' + longi + '.json';
   request
   .get(weatherUrl)
   .end(function(err, data) {
@@ -25,14 +25,14 @@ app.get('/current/:lat/:longi', function(req, res) {
     if (tempurature  < 32) {
       return res.json({msg: 'NO! ' + tempurature + degreeSymbol + ' is below freezing!'});
     }
-    if (tempurature >= 32 && tempurature < 55) {
+    if (tempurature >= 32 && tempurature < 60) {
       return res.json({msg: 'No! Stay inside and keep warm, it\'s only ' + tempurature + degreeSymbol});
     }
     if (tempurature >= 85) {
       return res.json({msg: 'No! Stay inside and keep cool, it\'s ' + tempurature + degreeSymbol + ' outside!!'});
     }
-    if (tempurature >= 55 && tempurature < 62) {
-      return res.json({msg: 'Yes!' + tempurature + degreeSymbol + ' is good, but you may want a light jacket.'});
+    if (tempurature >= 60 && tempurature < 66) {
+      return res.json({msg: 'Yes! ' + tempurature + degreeSymbol + ' is good, but you may want a light jacket.'});
     }
     res.json({msg: 'YES! ' + tempurature + degreeSymbol + ' is the perfect tempurature to eat outside.'});
   });
