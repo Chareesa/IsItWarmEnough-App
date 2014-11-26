@@ -13,7 +13,7 @@ app.get('/current/:lat/:longi', function(req, res) {
   var lat = req.params.lat;
   var longi = req.params.longi;
 
-  var weatherUrl = 'http://api.wunderground.com/api/'+ process.env.WUNDER_API + '/conditions/q/' + lat + ',' + longi + '.json';
+  var weatherUrl = 'http://api.wunderground.com/api/' + process.env.WUNDER_API + '/conditions/q/' + lat + ',' + longi + '.json';
   request
   .get(weatherUrl)
   .end(function(err, data) {
