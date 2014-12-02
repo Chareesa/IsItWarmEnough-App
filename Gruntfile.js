@@ -62,5 +62,4 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev', 'jshint', 'simplemocha', 'jscs']);
-  grunt.registerTask('default', ['test']);
 };
