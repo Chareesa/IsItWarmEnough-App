@@ -5,9 +5,9 @@ var app = express();
 var request = require('superagent');
 var fs = require('fs');
 
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/build'));
 
-var index = fs.readFileSync('./client/index.html');
+var index = fs.readFileSync('./build/index.html');
 
 app.get('/current/:lat/:longi', function(req, res) {
   var lat = req.params.lat;
@@ -23,7 +23,7 @@ app.get('/current/:lat/:longi', function(req, res) {
     var degreeSymbol = String.fromCharCode(176);
 
     if (tempurature  < 32) {
-      return res.json({msg: 'NO! ' + tempurature + degreeSymbol + ' is below freezing!'});
+      return res.json({msg: 'NO! ' + tempurature + degreeSymbol + ' is below freezing! Stay inside and keep warm.'});
     }
     if (tempurature >= 32 && tempurature < 60) {
       return res.json({msg: 'No! Stay inside and keep warm, it\'s only ' + tempurature + degreeSymbol});
