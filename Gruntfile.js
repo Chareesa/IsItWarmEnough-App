@@ -9,6 +9,24 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jscs');
 
   grunt.initConfig({
+    jshint: {
+      options: {
+        node: true
+      },
+      src: ['server.js']
+    },
+
+    simplemocha: {
+      src: ['test/**/*.js']
+    },
+
+    jscs: {
+      src: ['server.js', 'app/js/**/*.js'],
+      options: {
+        config: '.jscsrc'
+      }
+    },
+
     clean: {
       dev: {
         src: ['build/']
@@ -35,31 +53,13 @@ module.exports = function(grunt) {
     },
 
     test: {
-      src: ['test/client/**/*test.js'],
+      src: ['test/**/*.js'],
       dest: 'test/test_bundle.js',
       options: {
         transform: ['debowerify']
       }
-    },
-
-    jshint: {
-      options: {
-        node: true
-      },
-      src: ['server.js']
-    },
-
-    simplemocha: {
-      src: ['test/*.js']
-    },
-
-    jscs: {
-      src: ['server.js'],
-      options: {
-        config: '.jscsrc'
-      }
     }
   });
 
-  grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev', 'jshint', 'simplemocha', 'jscs']);
+  grunt.registerTask('build:dev', ['jshint', 'simplemocha', 'jscs', 'clean:dev', 'browserify:dev', 'copy:dev']);
 };
