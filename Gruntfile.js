@@ -49,14 +49,14 @@ module.exports = function(grunt) {
         options: {
           transform: ['debowerify']
         }
-      }
-    },
+      },
 
-    test: {
-      src: ['test/**/*.js'],
-      dest: 'test/test_bundle.js',
-      options: {
-        transform: ['debowerify']
+      test: {
+        src: ['test/**/*.js'],
+        dest: 'test/test_bundle.js',
+        options: {
+          transform: ['debowerify']
+        }
       }
     }
   });
