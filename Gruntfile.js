@@ -49,17 +49,10 @@ module.exports = function(grunt) {
         options: {
           transform: ['debowerify']
         }
-      },
-
-      test: {
-        src: ['test/**/*.js'],
-        dest: 'test/test_bundle.js',
-        options: {
-          transform: ['debowerify']
-        }
       }
     }
   });
 
-  grunt.registerTask('build:dev', ['jshint', 'simplemocha', 'jscs', 'clean:dev', 'browserify:dev', 'copy:dev']);
+  grunt.registerTask('build:dev', ['jshint', 'simplemocha', 'jscs', 'clean:dev', 'browserify', 'copy:dev']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'browserify', 'simplemocha']);
 };
