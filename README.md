@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Chareesa/IsTheWeatherGood-App.svg?branch=master)](https://travis-ci.org/Chareesa/IsTheWeatherGood-App)
+[![Build Status](https://travis-ci.org/Chareesa/IsItWarmEnough-App.svg?branch=master)](https://travis-ci.org/Chareesa/IsItWarmEnough-App)
 
 A single page web app.
 
