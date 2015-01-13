@@ -37,12 +37,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Chareesa/IsTheWeatherGood-App.git"
+    "url": "https://github.com/Chareesa/IsItWarmEnough-App.git"
   },
   "author": "Chareesa Graham",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Chareesa/IsTheWeatherGood-App/issues"
+    "url": "https://github.com/Chareesa/IsItWarmEnough-App/issues"
   },
-  "homepage": "https://github.com/Chareesa/IsTheWeatherGood-App"
+  "homepage": "https://github.com/Chareesa/IsItWarmEnough-App"
 }

@@ -53,6 +53,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build:dev', ['jshint', 'simplemocha', 'jscs', 'clean:dev', 'browserify', 'copy:dev']);
+  grunt.registerTask('build:dev', ['clean:dev', 'browserify', 'copy:dev', 'jshint', 'simplemocha', 'jscs']);
   grunt.registerTask('test', ['jshint', 'jscs', 'browserify', 'simplemocha']);
 };
