@@ -1,5 +1,12 @@
-[![Build Status](https://travis-ci.org/Chareesa/IsItWarmEnough-App.svg?branch=master)](https://travis-ci.org/Chareesa/IsItWarmEnough-App)
+Is it warm enough to eat outside?
+=================================
 
-A single page web app.
+[![Build Status](https://travis-ci.org/Chareesa/IsItWarmEnough-App.svg?branch=newBranch)](https://travis-ci.org/Chareesa/IsItWarmEnough-App)
 
-Geolocates the user with the HTML5 Geolocation API and lets the user know if the weather is warm enough to eat outside.
+Geolocates the user and determines the current temperature at their location using the HTML5 Geolocation API and Weather Underground API.
+
+A single page web app integrating Express, Browserify, JavaScript, HTML, and CSS.
+
+The app is hosted on Heroku, you can see it here: https://isitwarmenough.herokuapp.com/
+
+The Weather Underground API key can be obtained here: http://www.wunderground.com/weather/api
