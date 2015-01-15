@@ -8,3 +8,5 @@ Geolocates the user and determines the current temperature at their location usi
 A single page web app integrating Express, Browserify, JavaScript, HTML, and CSS.
 
 The app is hosted on Heroku, you can see it here: https://isitwarmenough.herokuapp.com/
+
+The Weather Underground API key can be obtained here: http://www.wunderground.com/weather/api
