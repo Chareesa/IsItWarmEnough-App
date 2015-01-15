@@ -1,6 +1,6 @@
 Is it warm enough to eat outside?
 =================================
-
+   
 [![Build Status](https://travis-ci.org/Chareesa/IsItWarmEnough-App.svg?branch=newBranch)](https://travis-ci.org/Chareesa/IsItWarmEnough-App)
 
 Geolocates the user and determines the current temperature at their location using the HTML5 Geolocation API and Weather Underground API.
